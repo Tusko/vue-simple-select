@@ -95,7 +95,7 @@ module.exports = [
   merge(config, {
     entry: path.resolve(__dirname + "/src/index.js"),
     output: {
-      filename: "vue-select.min.js",
+      filename: "vue-simplest-select.min.js",
       libraryTarget: "window",
       library: "vueSelect"
     }
@@ -103,9 +103,9 @@ module.exports = [
   merge(config, {
     entry: path.resolve(__dirname + "/src/vueSelect.vue"),
     output: {
-      filename: "vue-select.js",
+      filename: "vue-simplest-select.js",
+      library: "vue-simplest-select",
       libraryTarget: "umd",
-      library: "vue-select",
       umdNamedDefine: true
     }
   })

@@ -19,7 +19,7 @@ Include the script file, then install the component with `Vue.use(vueSelect);` e
 ></script>
 <script
   type="text/javascript"
-  src="node_modules/vue-simplest-select/dist/vue-select.min.js"
+  src="node_modules/vue-simplest-select/dist/vue-simplest-select.min.js"
 ></script>
 <script type="text/javascript">
   Vue.use(vueSelect);
@@ -29,7 +29,7 @@ Include the script file, then install the component with `Vue.use(vueSelect);` e
 ### Module
 
 ```js
-import vueSelect from "vue-select";
+import vueSelect from "vue-simplest-select";
 ```
 
 ## Usage
