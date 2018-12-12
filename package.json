@@ -42,5 +42,8 @@
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "babel-loader": "^8.0.4"
+  },
+  "dependencies": {
+    "webpack-merge": "^4.1.5"
   }
 }

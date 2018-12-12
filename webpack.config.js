@@ -1,11 +1,13 @@
 "use strict";
 const webpack = require("webpack");
 const { VueLoaderPlugin } = require("vue-loader");
+const merge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const path = require("path");
-module.exports = {
+
+const config = {
   mode: devMode,
   entry: ["./dev/app.js"],
   module: {
@@ -44,6 +46,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        include: __dirname,
         use: {
           loader: "babel-loader"
         }
@@ -78,9 +81,32 @@ module.exports = {
       vue: "vue/dist/vue.js"
     }
   },
+  optimization: {
+    minimize: true
+  },
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/",
     filename: "[name].js"
   }
 };
+
+module.exports = [
+  merge(config, {
+    entry: path.resolve(__dirname + "/src/index.js"),
+    output: {
+      filename: "vue-select.min.js",
+      libraryTarget: "window",
+      library: "vueSelect"
+    }
+  }),
+  merge(config, {
+    entry: path.resolve(__dirname + "/src/vueSelect.vue"),
+    output: {
+      filename: "vue-select.js",
+      libraryTarget: "umd",
+      library: "vue-select",
+      umdNamedDefine: true
+    }
+  })
+];

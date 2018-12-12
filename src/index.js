@@ -1,3 +1,7 @@
-import vueSelect from "./components/vueSelect.vue";
+import vueSelect from "./vueSelect.vue";
 
-export default vueSelect;
+export default {
+  install: function(Vue) {
+    Vue.component("vueSelect", vueSelect);
+  }
+};

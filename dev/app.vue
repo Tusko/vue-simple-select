@@ -24,33 +24,33 @@
 </template>
 
 <script>
+import Vue from "vue";
 import vueSelect from "../src";
+Vue.use(vueSelect);
+
 export default {
   name: "App",
-  components: {
-    vueSelect
-  },
   data: () => ({
     options: [
       {
         label: "Option 1",
-        value: "V1"
+        value: "value 1"
       },
       {
         label: "Option 2",
-        value: "V2"
+        value: "value 2"
       },
       {
         label: "Option 3",
-        value: "V3"
+        value: "value 3"
       },
       {
         label: "Option 4",
-        value: "V4"
+        value: "value 4"
       },
       {
         label: "Option 5",
-        value: "V5"
+        value: "value 5"
       }
     ]
   }),
