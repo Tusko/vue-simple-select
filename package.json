@@ -1,5 +1,5 @@
 {
-  "name": "vue-simple-select",
+  "name": "vue-simplest-select",
   "version": "1.0.0",
   "description": "The simplest Vue2 select component",
   "main": "src/index.js",

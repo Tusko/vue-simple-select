@@ -1,11 +1,11 @@
-# vue-simple-select
+# vue-simplest-select
 
 The simplest Vue2 select component
 
 ## Installation
 
 ```js
-npm i --save-dev vue-simple-select
+npm i --save-dev vue-simplest-select
 ```
 
 ### Browser
@@ -19,7 +19,7 @@ Include the script file, then install the component with `Vue.use(vueSelect);` e
 ></script>
 <script
   type="text/javascript"
-  src="node_modules/vue-simple-select/dist/vue-select.min.js"
+  src="node_modules/vue-simplest-select/dist/vue-select.min.js"
 ></script>
 <script type="text/javascript">
   Vue.use(vueSelect);
