@@ -13,7 +13,8 @@
   },
   "rules": {
     "console": true,
-    "vue/max-attributes-per-line": 0
+    "vue/max-attributes-per-line": 0,
+    "vue/no-unused-vars": "warning"
   },
   "parserOptions": {
     "parser": "babel-eslint"
