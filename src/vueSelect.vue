@@ -3,7 +3,7 @@
     <select :id="id" :name="name" @change="onChange">
       <option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option>
     </select>
-    <i class="select--icon"/>
+    <i class="select--icon" />
   </div>
 </template>
 
@@ -87,6 +87,9 @@ export default {
         value: selected.target.value,
         id: selected.target.id
       });
+
+      // action to use v-model
+      this.$emit("input", selected.target.id);
     }
   }
 };

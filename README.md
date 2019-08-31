@@ -42,6 +42,7 @@ Once installed, it can be used in a template as simply as:
   :width="200"
   name="demo-id"
   :options="options"
+  v-model="selectedValue"
   @vueSelectChanged="onChange"
 >
 </vueSelect>
@@ -51,6 +52,7 @@ in your data add array with options:
 
 ```js
 data: () => ({
+  selectedValue: null,
   options: [
     {
       label: "Option 1",
